@@ -1,0 +1,15 @@
+package modelo;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+public class Tarjeta {
+	private String marca;
+	private long numero;
+	private Cardholder cardholder;
+	private GregorianCalendar fecha;
+	
+	
+	
+
+}

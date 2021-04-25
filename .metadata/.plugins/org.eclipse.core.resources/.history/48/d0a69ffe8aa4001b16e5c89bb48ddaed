@@ -1,0 +1,16 @@
+package modelo;
+
+import java.util.GregorianCalendar;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		GregorianCalendar fecha = new GregorianCalendar();
+		
+		System.out.println(fecha.YEAR/(float)fecha.MONTH);
+
+	}
+
+}
