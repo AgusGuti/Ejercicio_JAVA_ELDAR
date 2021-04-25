@@ -14,7 +14,9 @@ public class Cardholder {
 
 	@Override
 	public String toString() {
-		return "Cardholder [nombre=" + nombre + ", apellido=" + apellido + "]";
+		return "Cardholder:\n"
+				+ "Nombre= " + nombre 
+				+ ",\nApellido= " + apellido;
 	}
 
 
@@ -35,9 +37,6 @@ public class Cardholder {
 
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
-	}
-	
-	
-	
+	}	
 
 }

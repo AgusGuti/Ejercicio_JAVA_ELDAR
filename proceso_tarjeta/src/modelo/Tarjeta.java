@@ -1,6 +1,8 @@
 package modelo;
 
+import java.util.Calendar;
 import java.util.GregorianCalendar;
+
 
 public class Tarjeta {
 	private String marca;
@@ -9,19 +11,22 @@ public class Tarjeta {
 	private GregorianCalendar vencimiento;
 	
 	
-	public Tarjeta(String marca, long numero, Cardholder cardholder, GregorianCalendar vencimiento) {
+	public Tarjeta(String marca, long numero, Cardholder cardholder, GregorianCalendar fe01) {
 		super();
 		this.marca = marca;
-		this.numero = numero;
+		this.setNumero(numero);
 		this.cardholder = cardholder;
-		this.vencimiento = vencimiento;
+		this.vencimiento = fe01;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Tarjeta [marca=" + marca + ", numero=" + numero + ", cardholder=" + cardholder + ", fecha=" + vencimiento
-				+ "]";
+		return "Tarjeta:\n"
+				+ "Marca= " + marca 
+				+ ",\nNumero= " + numero 
+				+ ",\nCardholder= " + cardholder.toString() 
+				+ ",\nFecha Vencimiento= " + (vencimiento.get(Calendar.MONTH)+1) + "/" + vencimiento.get(Calendar.YEAR);
 	}
 
 
@@ -41,7 +46,10 @@ public class Tarjeta {
 
 
 	public void setNumero(long numero) {
-		this.numero = numero;
+		if(Long.toString(numero).length() == 16)
+			this.numero = numero;
+		else
+			System.out.println("ERROR> Formato invalido en numero de tarjeta.");
 	}
 
 
@@ -55,7 +63,7 @@ public class Tarjeta {
 	}
 
 
-	public GregorianCalendar getVencimiento() {
+	public Calendar getVencimiento() {
 		return vencimiento;
 	}
 

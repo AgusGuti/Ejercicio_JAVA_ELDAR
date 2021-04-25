@@ -1,0 +1,18 @@
+package ejecutable;
+
+import java.util.GregorianCalendar;
+
+import modelo.Cardholder;
+
+public class Procesamiento {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		GregorianCalendar fe01 = new GregorianCalendar(2024,06,01);
+		Cardholder user01 = new Cardholder("AGUSTIN", "GUTIERREZ");
+		Tarjeta tarj01 = new Tarjeta("VISA", 1234098745675432, user01, fe01);
+		
+	}
+
+}

@@ -1,0 +1,46 @@
+package modelo;
+
+public class Marca {
+	private String nombre;
+	private float tasa;
+	
+	
+	public Marca(String nombre, float tasa) {
+		super();
+		this.nombre = nombre;
+		this.setTasa(tasa);
+	}
+
+
+	@Override
+	public String toString() {
+		return "Marca:\n"
+				+ "Nombre= " + nombre 
+				+ ",\nTasa= " + tasa;
+	}
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+	public float getTasa() {
+		return tasa;
+	}
+
+
+	public void setTasa(float tasa) {
+		if(0.3f <= tasa || tasa <= 5.0f)
+			this.tasa = tasa;
+		else
+			System.out.println("\nERROR> Tasa fuera de rango posible.");
+	}
+	
+
+}

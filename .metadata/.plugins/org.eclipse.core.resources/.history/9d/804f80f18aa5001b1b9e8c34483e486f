@@ -1,0 +1,34 @@
+package ejecutable;
+
+import java.util.GregorianCalendar;
+
+import modelo.Cardholder;
+import modelo.Operacion;
+import modelo.Tarjeta;
+
+public class Procesamiento {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//SETEO DE OBJETOS DE PRUEBA
+		GregorianCalendar fe01 = new GregorianCalendar(2024,06,01);
+		GregorianCalendar fe02 = new GregorianCalendar(2020,11,01);
+		
+		Cardholder user01 = new Cardholder("AGUSTIN", "GUTIERREZ");
+		
+		Tarjeta tarj01 = new Tarjeta("VISA", 1234098745675432L, user01, fe01);
+		Tarjeta tarj02 = new Tarjeta("VISA", 9812763409569274L, user01, fe02);
+		
+		Operacion op01 = new Operacion(tarj01, 507.60f);
+		
+		//PUNTO 01
+		
+		tarj01.toString();
+		
+		System.out.println("\n\n----------------------------------------\n\n");
+		
+		
+	}
+
+}

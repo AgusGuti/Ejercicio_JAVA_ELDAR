@@ -1,0 +1,84 @@
+package modelo;
+
+import java.util.GregorianCalendar;
+
+public class Operacion {
+
+	private Tarjeta tajeta;
+	private float importe;
+	private float tasa;
+	
+	
+	public Operacion(Tarjeta tajeta, float importe) {
+		super();
+		this.tajeta = tajeta;
+		this.setImporte(importe);
+	}
+
+	@Override
+	public String toString() {
+		return "Operacion:\n"
+				+ "Tajeta= " + tajeta 
+				+ ",\nImporte= " + importe;
+	}
+
+	public Tarjeta getTajeta() {
+		return tajeta;
+	}
+
+	public void setTajeta(Tarjeta tajeta) {
+		this.tajeta = tajeta;
+	}
+
+	public float getImporte() {
+		return importe;
+	}
+
+	public void setImporte(float importe) {
+		if(importe >= 0)
+			this.importe = importe;
+		else
+			System.out.println("\nERROR> Importe negativo.");
+	}
+	
+	public float getTasa() {
+		return tasa;
+	}
+	
+	public void setTasa(float tasa) {
+		if(0.3f <= tasa || tasa <= 5.0f)
+			this.tasa = tasa;
+		else
+			System.out.println("\nERROR> Tasa fuera de rango posible.");
+	}
+	
+	public boolean validarOperacion()
+	{
+		boolean result = false;
+		
+		if(this.importe<1000f && this.tajeta.validarTarjeta())
+			result=true;
+		
+		return result;
+	}
+		
+	
+	@SuppressWarnings("static-access")
+	public void setTasa(String marca)
+	{
+		GregorianCalendar fecha = new GregorianCalendar();
+		
+		switch(marca)
+		{
+			case "VISA":
+				this.tajeta.se= (fecha.YEAR/(float)fecha.MONTH);
+				break;
+			case "NARA":
+				this.tasa= fecha.DAY_OF_MONTH * 0.5f;
+				break;
+			case "AMEX":
+				this.tasa= fecha.MONTH * 0.1f;
+				break;
+		}		
+	}
+}
