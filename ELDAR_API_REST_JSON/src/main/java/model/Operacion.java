@@ -3,17 +3,21 @@ package model;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Operacion {
 	
-	private long id;
+	private @Id @GeneratedValue long id;
 	private Tarjeta tarjeta;
 	private float importe;
 	private float tasa;
 	
 	
-	public Operacion(long id, Tarjeta tarjeta, float importe) {
+	public Operacion(Tarjeta tarjeta, float importe) {
 		super();
-		this.id = id;
 		this.tarjeta = tarjeta;
 		this.setImporte(importe);
 		this.setTasa(this.tarjeta.getMarca());

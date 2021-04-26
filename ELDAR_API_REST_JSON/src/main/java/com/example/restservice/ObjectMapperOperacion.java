@@ -10,7 +10,9 @@ import java.io.File;
 import java.io.IOException;
 
 public class ObjectMapperOperacion {
+	
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    
     public Operacion readJsonWithObjectMapper() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         Operacion operacion = objectMapper.readValue(new File("operaciones.JSON"), Operacion.class);
