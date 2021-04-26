@@ -1,0 +1,52 @@
+{
+  "operaciones":
+  [
+    {
+      "id": 1,
+      "tarjeta": {
+        "marca": "VISA",
+        "numero": "1234098745675432",
+        "cardholder": {
+          "id": "1",
+          "nombre": "AGUSTIN",
+          "apellido": "GUTIERREZ"
+        },
+        "vencimiento": "2024-07-01"
+      },
+      "importe": "500",
+      "tasa": "5.0"
+    },
+
+    {
+      "id": 2,
+      "tarjeta": {
+        "marca": "VISA",
+        "numero": "1234098745675432",
+        "cardholder": {
+          "id": "1",
+          "nombre": "AGUSTIN",
+          "apellido": "GUTIERREZ"
+        },
+        "vencimiento": "2024-07-01"
+      },
+      "importe": "1200",
+      "tasa": "5.0"
+    },
+
+    {
+      "id": 3,
+      "tarjeta": {
+        "marca": "AMEX",
+        "numero": "4095692749812763",
+        "cardholder": {
+          "id": "1",
+          "nombre": "AGUSTIN",
+          "apellido": "GUTIERREZ"
+        },
+        "vencimiento": "2027-02-01"
+      },
+      "importe": "245",
+      "tasa": "0.4"
+    }
+  ]
+}
