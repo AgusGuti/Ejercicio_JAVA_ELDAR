@@ -6237,3 +6237,15 @@ org.eclipse.debug.core.DebugException: Launch configuration ELDAR_API_JSON - Eld
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 !SUBENTRY 1 org.eclipse.debug.core 4 5012 2021-04-26 09:34:29.869
 !MESSAGE Launch configuration ELDAR_API_JSON - EldarApiJsonApplication at file:/C:/Users/ruso9/Documents/GitHub/Ejercicio_JAVA_Backend/Ejercicio_JAVA_ELDAR/.metadata/.plugins/org.eclipse.debug.core/.launches/ELDAR_API_JSON%20-%20EldarApiJsonApplication.launch does not exist.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-26 09:37:07.554
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ArwbIDGz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-26 09:37:07.554
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.ArwbIDGz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-26 09:37:07.555
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-26 09:37:07.556
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ArwbIDGz => OK
